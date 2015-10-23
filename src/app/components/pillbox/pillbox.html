@@ -1,3 +1,5 @@
-<div>
-  Hello world!
-</div>
+ <div class="textbox">
+   <span ng-repeat="item in pillbox.pills" class="item" ng-class="{invalid:!item.isValid(),selected:item.isSelected()}">
+     <span>{{item.value}}</span><span class="remove" contenteditable="false" ng-click="item.remove()">×</span></span>
+   <span class="input" contenteditable="true" ng-focus="pillbox.onFocus()" ng-keydown="pillbox.onKeyUp($event)">
+ </div>

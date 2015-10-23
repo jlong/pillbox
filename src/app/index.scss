@@ -1,16 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 body {
-  font-family: sans-serif;
-  font-weight: 100;
-  padding: 20px;
-  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.page-content {
-  max-width: 980px;
-  padding: 20px;
-  margin: 0 auto;
+.textbox {
+  min-height:3em;
+  border:1px solid gray;
+  padding:10px;
+  cursor:text;
 }
 
+.input {
+  display:inline-block;
+  min-width:20px;
+  &:focus {
+    outline:0;
+  }
+}
+
+$blue: #336699;
+$red: #EE3B3B;
+
+.item {
+  padding:3px 6px;
+  text-shadow:0 1px white;
+  padding-right:28px;
+  padding-left:8px;
+  background:lighten($blue,50);
+  border-radius:3px;
+  margin-right:3px;
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+  color:$blue;
+  border:1px solid $blue;
+  &.selected {
+    box-shadow:0 0 0 2px black;
+  }
+  &.invalid {
+    border:1px solid $red;
+    color:$red;
+  }
+  .remove {
+    display:block;
+    position:absolute;
+    top:0; right:0;
+    width:20px;
+    height:100%;
+    background:lighten($blue,43);
+    color:$blue;
+    text-align:center;
+    line-height:1.7em;
+    cursor:pointer;
+    border-left:1px solid inherit;
+  }
+}
 
 /* gulp-inject */
 // injector
